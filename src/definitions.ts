@@ -1,3 +1,4 @@
+// @ts-ignore
 declare module "@capacitor/core" {
   interface PluginRegistry {
     IsDebug: IsDebugPlugin;
@@ -5,5 +6,5 @@ declare module "@capacitor/core" {
 }
 
 export interface IsDebugPlugin {
-  echo(options: { value: string }): Promise<{value: string}>;
+  check(): Promise<{value: boolean}>;
 }
